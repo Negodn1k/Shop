@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
         Order order = new Order();
-        PurchasePrice purchase = new PurchasePrice();
-        SellPrice sellPrice = new SellPrice();
+        Provider purchase = new Provider();
+        Seller sellPrice = new Seller();
 
         int boxCountSoda = order.boxCountSoda = 10;
         int boxCountChoco = order.boxCountChoco = 5;
@@ -32,10 +32,16 @@ public class Main {
         int sellPriceSoda = sellPrice.sellPrice(purchasePriceSoda, surchargeSoda);
         int sellPriceMeat = sellPrice.sellPrice(purchasePriceMeat, surchargeMeat);
 
+        int allSellPrice = sellPrice.fullSellPrice(sellPriceChoco,sellPriceMeat,sellPriceSoda);
+
+        int profit = allSellPrice - allPurchasePrice;
+
         System.out.println("Sell price Soda = " + sellPriceSoda);
         System.out.println("Sell price Choco = " + sellPriceChoco);
         System.out.println("Sell price Meat = " + sellPriceMeat);
-        System.out.println("All purchase price = " + allPurchasePrice);
         System.out.println("Things all products = " + thingsAllProducts);
+        System.out.println("All purchase price = " + allPurchasePrice);
+        System.out.println("All sell price = " + allSellPrice);
+        System.out.println("Profit = " + profit);
     }
 }

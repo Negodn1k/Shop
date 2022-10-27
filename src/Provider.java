@@ -1,4 +1,4 @@
-public class PurchasePrice {
+public class Provider {
     int pricePerThingChoco;
     int pricePerThingSoda;
     int pricePerThingMeet;
