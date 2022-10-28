@@ -7,7 +7,7 @@ public class Seller {
         return purchasePrice + surcharge;
     }
 
-    public static int fullSellPrice(int firstSellPrice, int secondSellPrice, int thirdSellprice) {
-        return firstSellPrice + secondSellPrice + thirdSellprice;
+    public static int fullSellPrice(int firstSellPrice, int secondSellPrice, int thirdSellPrice) {
+        return firstSellPrice + secondSellPrice + thirdSellPrice;
     }
 }

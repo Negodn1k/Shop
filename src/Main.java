@@ -1,17 +1,28 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Order order = new Order();
         Provider purchase = new Provider();
         Seller sellPrice = new Seller();
+        Scanner input = new Scanner(System.in);
 
-        int boxCountSoda = order.boxCountSoda = 10;
-        int boxCountChoco = order.boxCountChoco = 5;
-        int thingsInBoxSoda = order.thingsInBoxSoda = 10;
-        int thingsInBoxChoco = order.thingsInBoxChoco = 20;
-        int countMeet = order.thingCountMeet = 50;
-        int pricePerThingMeet = purchase.pricePerThingMeet = 500;
-        int pricePerThingChoco = purchase.pricePerThingChoco = 100;
-        int pricePerThingSoda = purchase.pricePerThingSoda = 150;
+        System.out.print("Enter count box Soda >> ");
+        int boxCountSoda = order.boxCountSoda = input.nextInt();
+        System.out.print("Enter count box Choco >> ");
+        int boxCountChoco = order.boxCountChoco = input.nextInt();
+        System.out.print("Enter count in box Soda >> ");
+        int thingsInBoxSoda = order.thingsInBoxSoda = input.nextInt();
+        System.out.print("Enter count in box Choco >> ");
+        int thingsInBoxChoco = order.thingsInBoxChoco = input.nextInt();
+        System.out.print("Enter thing count Meet >> ");
+        int countMeet = order.thingCountMeet = input.nextInt();
+        System.out.print("Enter purchase price per thing meet >> ");
+        int pricePerThingMeet = purchase.pricePerThingMeet = input.nextInt();
+        System.out.print("Enter purchase price per thing choco >> ");
+        int pricePerThingChoco = purchase.pricePerThingChoco = input.nextInt();
+        System.out.print("Enter purchase price per thing soda >> ");
+        int pricePerThingSoda = purchase.pricePerThingSoda = input.nextInt();
 
         int thingsChoco = order.thingsBoxes(thingsInBoxChoco, boxCountChoco);
         int thingsSoda = order.thingsBoxes(thingsInBoxSoda, boxCountSoda);
@@ -32,7 +43,7 @@ public class Main {
         int sellPriceSoda = sellPrice.sellPrice(purchasePriceSoda, surchargeSoda);
         int sellPriceMeat = sellPrice.sellPrice(purchasePriceMeat, surchargeMeat);
 
-        int allSellPrice = sellPrice.fullSellPrice(sellPriceChoco,sellPriceMeat,sellPriceSoda);
+        int allSellPrice = sellPrice.fullSellPrice(sellPriceChoco, sellPriceMeat, sellPriceSoda);
 
         int profit = allSellPrice - allPurchasePrice;
 
